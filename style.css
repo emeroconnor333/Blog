@@ -1,0 +1,115 @@
+/*header*/
+.gradient-background {
+    background: linear-gradient(300deg, #FFFFFF, #CCE7FF, #F9D2D8);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+#header .flex-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+h1{
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+}
+
+/*links bar*/
+#links .flex-container{
+   display: flex;
+   justify-content: space-around;
+}
+#links a{
+  color: black;
+  text-decoration: none;
+}
+
+/*footer*/
+.footer.flex-container{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.footer a {
+  color: black;
+  text-decoration: none;
+}
+
+/*home page*/
+
+/*blog and journal albums page*/
+.album-container a {
+  text-decoration: none;
+  color: black;
+}
+
+.album-container {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  justify-content: space-between;
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .album-container {
+    grid-template-columns: repeat(2, 320px);
+  }
+}
+@media (max-width: 1000px) {
+  .album-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.album-container .image {
+  border: none;
+  color: black;
+  display: inline-block;
+  width: 100%;
+  height: 226px; 
+  text-align: center;
+  background-color: white;
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
+}
+
+.album-container > .item {
+  outline: 1px solid grey;
+  margin: 20px 0;
+  border-radius: 2%;
+}
+
+.album-container .text {
+  margin: 10px;
+}
+
+.text > button {
+  border: none;
+  background-color: white;
+  padding: 0;
+}
+
+/*blog posts*/
+@media (max-width: 600px) {
+  #blog-post img{
+    width: 100%;
+  }
+}
+.float-right {
+  float: right;
+  margin: 15px;
+  width: 30%
+}
